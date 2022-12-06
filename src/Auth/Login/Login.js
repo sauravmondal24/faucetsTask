@@ -1,48 +1,56 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import { FaGoogle, FaFacebook, FaInstagram } from 'react-icons/fa';
+import './Login.css';
 
 const Login = () => {
 	return (
-		<div>
-			<h2>This is a Login page</h2>
-			<form class="dropdown-menu p-4">
-				<div class="mb-3">
-					<label for="exampleDropdownFormEmail2" class="form-label">
-						Email address
-					</label>
-					<input
-						type="email"
-						class="form-control"
-						id="exampleDropdownFormEmail2"
-						placeholder="email@example.com"
-					/>
-				</div>
-				<div class="mb-3">
-					<label for="exampleDropdownFormPassword2" class="form-label">
-						Password
-					</label>
-					<input
-						type="password"
-						class="form-control"
-						id="exampleDropdownFormPassword2"
-						placeholder="Password"
-					/>
-				</div>
-				<div class="mb-3">
-					<div class="form-check">
-						<input
-							type="checkbox"
-							class="form-check-input"
-							id="dropdownCheck2"
-						/>
-						<label class="form-check-label" for="dropdownCheck2">
-							Remember me
+		<div style={{ backgroundColor: '#EEF2FE' }} className=" py-5">
+			<div className=" m-auto mt-5 card p-5 login">
+				<h2 className="text-center">Login</h2>
+				<form class=" ">
+					<div class="mb-3">
+						<label for="exampleDropdownFormEmail2" class="form-label fw-bold">
+							Email
 						</label>
+						<input
+							type="email"
+							class="form-control"
+							id="exampleDropdownFormEmail2"
+							placeholder="Enter Your Email"
+						/>
 					</div>
+					<div class="mb-3">
+						<label
+							for="exampleDropdownFormPassword2"
+							class="form-label fw-bold"
+						>
+							Password
+						</label>
+						<input
+							type="password"
+							class="form-control"
+							id="exampleDropdownFormPassword2"
+							placeholder="Enter your Password"
+						/>
+					</div>
+
+					<button type="submit" class="btn btn-primary w-100 mt-3 fw-bold">
+						Login
+					</button>
+				</form>
+				<div className="py-2 text-center">
+					<p>
+						Don't have an account? <Link to="/signup">Signup</Link>
+					</p>
+					<h5>Or</h5>
 				</div>
-				<button type="submit" class="btn btn-primary">
-					Sign in
-				</button>
-			</form>
+				<div className="d-flex justify-content-around align-items-center w-25 m-auto">
+					<FaGoogle></FaGoogle>
+					<FaFacebook></FaFacebook>
+					<FaInstagram></FaInstagram>
+				</div>
+			</div>
 		</div>
 	);
 };

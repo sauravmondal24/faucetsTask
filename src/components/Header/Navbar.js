@@ -73,12 +73,12 @@ const Navbar = () => {
 												></button>
 											</div>
 											<div class="modal-body">
-												<div className="row g-4">
-													<div className="col-md-6 p-5 bg-light">
+												<div className="d-flex gap-3 text-center">
+													<div className="col-6 p-5 bg-light">
 														<img className="img-fluid" src={img1} alt="" />
 														<h4>MetaMask</h4>
 													</div>
-													<div className="col-md-6 p-5 bg-light">
+													<div className="col-6 p-5 bg-light">
 														<img className="img-fluid" src={img2} alt="" />
 														<h4>WalletConnect</h4>
 													</div>
