@@ -6,7 +6,6 @@ import img1 from '../../assets/img/MetaMask.551edf10.svg';
 import img2 from '../../assets/img/WalletConnect.d0b10794.svg';
 
 const Navbar = () => {
-	// const [data, setData] = useState();
 	const { setData } = useContext(ValueProvider);
 	const values = [
 		'Ethereum Kovan',
