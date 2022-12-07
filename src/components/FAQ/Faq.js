@@ -1,15 +1,16 @@
 import React from 'react';
+import './Faq.css';
 
 const Faq = () => {
 	return (
-		<div className="w-75 m-auto">
+		<div className="faq-sec">
 			<h2 className="text-center py-4 fw-bold">Frequently Asked Questions</h2>
 			<div>
-				<div class="accordion" id="accordionExample">
-					<div class="accordion-item my-2">
-						<h2 class="accordion-header" id="headingOne">
+				<div className="accordion" id="accordionExample">
+					<div className="accordion-item my-2">
+						<h2 className="accordion-header" id="headingOne">
 							<button
-								class="accordion-button fw-bold fs-5"
+								className="accordion-button fw-bold fs-5"
 								type="button"
 								data-bs-toggle="collapse"
 								data-bs-target="#collapseOne"
@@ -21,11 +22,11 @@ const Faq = () => {
 						</h2>
 						<div
 							id="collapseOne"
-							class="accordion-collapse collapse show"
+							className="accordion-collapse collapse show"
 							aria-labelledby="headingOne"
 							data-bs-parent="#accordionExample"
 						>
-							<div class="accordion-body">
+							<div className="accordion-body">
 								A blockchain oracle is any system that services a smart contract
 								by providing it with data from an off-chain source or connecting
 								it with an off-chain system. Oracles enable connectivity between
@@ -35,10 +36,10 @@ const Faq = () => {
 							</div>
 						</div>
 					</div>
-					<div class="accordion-item my-2">
-						<h2 class="accordion-header" id="headingTwo">
+					<div className="accordion-item my-2">
+						<h2 className="accordion-header" id="headingTwo">
 							<button
-								class="accordion-button collapsed fw-bold fs-5"
+								className="accordion-button collapsed fw-bold fs-5"
 								type="button"
 								data-bs-toggle="collapse"
 								data-bs-target="#collapseTwo"
@@ -50,11 +51,11 @@ const Faq = () => {
 						</h2>
 						<div
 							id="collapseTwo"
-							class="accordion-collapse collapse"
+							className="accordion-collapse collapse"
 							aria-labelledby="headingTwo"
 							data-bs-parent="#accordionExample"
 						>
-							<div class="accordion-body">
+							<div className="accordion-body">
 								Oracles enable smart contracts to interact with off-chain
 								resources. Without oracles, smart contracts can only access data
 								within a blockchain, severely limiting their potential
@@ -70,10 +71,10 @@ const Faq = () => {
 							</div>
 						</div>
 					</div>
-					<div class="accordion-item my-2">
-						<h2 class="accordion-header" id="headingThree">
+					<div className="accordion-item my-2">
+						<h2 className="accordion-header" id="headingThree">
 							<button
-								class="accordion-button collapsed fw-bold fs-5"
+								className="accordion-button collapsed fw-bold fs-5"
 								type="button"
 								data-bs-toggle="collapse"
 								data-bs-target="#collapseThree"
@@ -85,11 +86,11 @@ const Faq = () => {
 						</h2>
 						<div
 							id="collapseThree"
-							class="accordion-collapse collapse"
+							className="accordion-collapse collapse"
 							aria-labelledby="headingThree"
 							data-bs-parent="#accordionExample"
 						>
-							<div class="accordion-body">
+							<div className="accordion-body">
 								The Chainlink Network refers to all of the decentralized oracle
 								networks actively operating using the Chainlink protocol,
 								including individual oracles, data providers running their own
@@ -105,10 +106,10 @@ const Faq = () => {
 							</div>
 						</div>
 					</div>
-					<div class="accordion-item my-2">
-						<h2 class="accordion-header" id="headingFour">
+					<div className="accordion-item my-2">
+						<h2 className="accordion-header" id="headingFour">
 							<button
-								class="accordion-button collapsed fw-bold fs-5"
+								className="accordion-button collapsed fw-bold fs-5"
 								type="button"
 								data-bs-toggle="collapse"
 								data-bs-target="#collapseFour"
@@ -121,11 +122,11 @@ const Faq = () => {
 						</h2>
 						<div
 							id="collapseFour"
-							class="accordion-collapse collapse"
+							className="accordion-collapse collapse"
 							aria-labelledby="headingFour"
 							data-bs-parent="#accordionExample"
 						>
-							<div class="accordion-body">
+							<div className="accordion-body">
 								The Chainlink Price Feeds page provides real-time visualizations
 								of each decentralized price feed that provides on-chain exchange
 								rates for cryptocurrencies, stablecoins, commodities, and
@@ -138,10 +139,10 @@ const Faq = () => {
 							</div>
 						</div>
 					</div>
-					<div class="accordion-item my-2">
-						<h2 class="accordion-header" id="headingThree">
+					<div className="accordion-item my-2">
+						<h2 className="accordion-header" id="headingThree">
 							<button
-								class="accordion-button collapsed fw-bold fs-5"
+								className="accordion-button collapsed fw-bold fs-5"
 								type="button"
 								data-bs-toggle="collapse"
 								data-bs-target="#collapseFive"
@@ -153,11 +154,11 @@ const Faq = () => {
 						</h2>
 						<div
 							id="collapseFive"
-							class="accordion-collapse collapse"
+							className="accordion-collapse collapse"
 							aria-labelledby="headingFive"
 							data-bs-parent="#accordionExample"
 						>
-							<div class="accordion-body">
+							<div className="accordion-body">
 								Chainlink VRF brings secure random number generation to the
 								blockchain. Chainlink VRF solves the difficult problem of
 								providing an on-chain source of randomness that is publicly
@@ -172,10 +173,10 @@ const Faq = () => {
 							</div>
 						</div>
 					</div>
-					<div class="accordion-item my-2">
-						<h2 class="accordion-header" id="headingSix">
+					<div className="accordion-item my-2">
+						<h2 className="accordion-header" id="headingSix">
 							<button
-								class="accordion-button collapsed fw-bold fs-5"
+								className="accordion-button collapsed fw-bold fs-5"
 								type="button"
 								data-bs-toggle="collapse"
 								data-bs-target="#collapseSix"
@@ -187,11 +188,11 @@ const Faq = () => {
 						</h2>
 						<div
 							id="collapseSix"
-							class="accordion-collapse collapse"
+							className="accordion-collapse collapse"
 							aria-labelledby="headingSix"
 							data-bs-parent="#accordionExample"
 						>
-							<div class="accordion-body">
+							<div className="accordion-body">
 								Chainlink Proof of Reserve provides smart contracts with the
 								data required to calculate the true collateralization of any
 								on-chain asset backed by off-chain reserves such as stablecoins
@@ -207,10 +208,10 @@ const Faq = () => {
 							</div>
 						</div>
 					</div>
-					<div class="accordion-item my-2">
-						<h2 class="accordion-header" id="headingSeven">
+					<div className="accordion-item my-2">
+						<h2 className="accordion-header" id="headingSeven">
 							<button
-								class="accordion-button collapsed fw-bold fs-5"
+								className="accordion-button collapsed fw-bold fs-5"
 								type="button"
 								data-bs-toggle="collapse"
 								data-bs-target="#collapseSeven"
@@ -222,11 +223,11 @@ const Faq = () => {
 						</h2>
 						<div
 							id="collapseSeven"
-							class="accordion-collapse collapse"
+							className="accordion-collapse collapse"
 							aria-labelledby="headingSeven"
 							data-bs-parent="#accordionExample"
 						>
-							<div class="accordion-body">
+							<div className="accordion-body">
 								Any individual or group that needs real-world data to power and
 								secure the execution of their smart contracts can benefit from
 								Chainlink’s robust and customizable framework for creating
@@ -243,10 +244,10 @@ const Faq = () => {
 							</div>
 						</div>
 					</div>
-					<div class="accordion-item my-2">
-						<h2 class="accordion-header" id="heading8">
+					<div className="accordion-item my-2">
+						<h2 className="accordion-header" id="heading8">
 							<button
-								class="accordion-button collapsed fw-bold fs-5"
+								className="accordion-button collapsed fw-bold fs-5"
 								type="button"
 								data-bs-toggle="collapse"
 								data-bs-target="#collapse8"
@@ -258,11 +259,11 @@ const Faq = () => {
 						</h2>
 						<div
 							id="collapse8"
-							class="accordion-collapse collapse"
+							className="accordion-collapse collapse"
 							aria-labelledby="heading8"
 							data-bs-parent="#accordionExample"
 						>
-							<div class="accordion-body">
+							<div className="accordion-body">
 								The Chainlink development team is continuously building the
 								network and protocol. To keep up to date with current progress
 								you can follow the Chainlink Github. You can find a full list of
@@ -270,10 +271,10 @@ const Faq = () => {
 							</div>
 						</div>
 					</div>
-					<div class="accordion-item my-2">
-						<h2 class="accordion-header" id="heading9">
+					<div className="accordion-item my-2">
+						<h2 className="accordion-header" id="heading9">
 							<button
-								class="accordion-button collapsed fw-bold fs-5"
+								className="accordion-button collapsed fw-bold fs-5"
 								type="button"
 								data-bs-toggle="collapse "
 								data-bs-target="#collapse9"
@@ -285,11 +286,11 @@ const Faq = () => {
 						</h2>
 						<div
 							id="collapse9"
-							class="accordion-collapse collapse "
+							className="accordion-collapse collapse "
 							aria-labelledby="heading9"
 							data-bs-parent="#accordionExample"
 						>
-							<div class="accordion-body">
+							<div className="accordion-body">
 								For inquiries related to security and support, please reach out
 								to the admins of official Chainlink channels or email
 								support@chain.link‍. You can also find more technical
@@ -302,10 +303,10 @@ const Faq = () => {
 							</div>
 						</div>
 					</div>
-					<div class="accordion-item my-2">
-						<h2 class="accordion-header" id="heading10">
+					<div className="accordion-item my-2">
+						<h2 className="accordion-header" id="heading10">
 							<button
-								class="accordion-button collapsed fw-bold fs-5"
+								className="accordion-button collapsed fw-bold fs-5"
 								type="button"
 								data-bs-toggle="collapse"
 								data-bs-target="#collapse10"
@@ -317,11 +318,11 @@ const Faq = () => {
 						</h2>
 						<div
 							id="collapse10"
-							class="accordion-collapse collapse"
+							className="accordion-collapse collapse"
 							aria-labelledby="heading10"
 							data-bs-parent="#accordionExample"
 						>
-							<div class="accordion-body">
+							<div className="accordion-body">
 								There are numerous projects working on the development of the
 								Chainlink ecosystem, including Chainlink Labs. You can find a
 								full list of open roles on the Chainlink Labs careers page.

@@ -8,34 +8,37 @@ const SignUp = () => {
 		<div style={{ backgroundColor: '#EEF2FE' }} className=" py-5">
 			<div className="m-auto mt-5 card p-5 login">
 				<h2 className="text-center">Sign Up</h2>
-				<form class=" ">
-					<div class="mb-3">
-						<label for="exampleDropdownFormEmail2" class="form-label fw-bold">
+				<form className=" ">
+					<div className="mb-3">
+						<label
+							htmlFor="exampleDropdownFormEmail2"
+							className="form-label fw-bold"
+						>
 							Email
 						</label>
 						<input
 							type="email"
-							class="form-control"
+							className="form-control"
 							id="exampleDropdownFormEmail2"
 							placeholder="Enter Your Email"
 						/>
 					</div>
-					<div class="mb-3">
+					<div className="mb-3">
 						<label
-							for="exampleDropdownFormPassword2"
-							class="form-label fw-bold"
+							htmlFor="exampleDropdownFormPassword2"
+							className="form-label fw-bold"
 						>
 							Password
 						</label>
 						<input
 							type="password"
-							class="form-control"
+							className="form-control"
 							id="exampleDropdownFormPassword2"
 							placeholder="Enter your Password"
 						/>
 					</div>
 
-					<button type="submit" class="btn btn-primary w-100 mt-3 fw-bold">
+					<button type="submit" className="btn btn-primary w-100 mt-3 fw-bold">
 						Sign Up
 					</button>
 				</form>

@@ -1,21 +1,36 @@
-import React from 'react';
-import { FaUserCircle } from 'react-icons/fa';
+import { useContext } from 'react';
+import { FaUserCircle, FaWallet } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
+import { ValueProvider } from '../../App';
 import img1 from '../../assets/img/MetaMask.551edf10.svg';
 import img2 from '../../assets/img/WalletConnect.d0b10794.svg';
 
 const Navbar = () => {
+	// const [data, setData] = useState();
+	const { setData } = useContext(ValueProvider);
+	const values = [
+		'Ethereum Kovan',
+		'Arbitrum Rinkeby',
+		'Avalanche Fuji',
+		'BNB Chain Testnet',
+		'Ethereum Rinkeby',
+		'Fantom Testnet',
+		'Harmony Testnet',
+		'POA Network Sokol',
+		'Polygon Mumbai'
+	];
+
 	return (
 		<div>
-			<nav class="navbar navbar-expand-lg navbar-light bg-light">
-				<div class="container">
-					<Link class="navbar-brand text-purple-200" to="/">
+			<nav className="navbar navbar-expand-lg navbar-light bg-light py-3 bg-white">
+				<div className="container">
+					<Link className="navbar-brand text-purple-200" to="/">
 						<h3 className="fw-bold" style={{ color: '#9B1FE9' }}>
 							Faucets
 						</h3>
 					</Link>
 					<button
-						class="navbar-toggler"
+						className="navbar-toggler"
 						type="button"
 						data-bs-toggle="collapse"
 						data-bs-target="#navbarTogglerDemo02"
@@ -23,56 +38,60 @@ const Navbar = () => {
 						aria-expanded="false"
 						aria-label="Toggle navigation"
 					>
-						<span class="navbar-toggler-icon"></span>
+						<span className="navbar-toggler-icon"></span>
 					</button>
-					<div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-						<ul class="navbar-nav me-auto mb-2 mb-lg-0"></ul>
-						<div class="d-flex">
+					<div className="collapse navbar-collapse" id="navbarTogglerDemo02">
+						<ul className="navbar-nav me-auto mb-2 mb-lg-0"></ul>
+						<div className="d-flex">
 							<div className="mx-3">
-								<select class="form-select" aria-label="Default select example">
-									<option selected>Ethereum Kovan</option>
-									<option value="1">Arbitrum Rinkeby</option>
-									<option value="2">Avalanche Fuji</option>
-									<option value="3">BNB Chain Testnet</option>
-									<option value="4">Ethereum Rinkeby</option>
-									<option value="5">Fantom Testnet</option>
-									<option value="6">Harmony Testnet</option>
-									<option value="7">POA Network Sokol</option>
-									<option value="8">Polygon Mumbai</option>
-								</select>
+								<form>
+									<select
+										className="form-select"
+										aria-label="Default select example"
+										onChange={(e) => setData(e.target.value)}
+									>
+										{values.map((value, i) => (
+											<option key={i}>{value}</option>
+										))}
+									</select>
+								</form>
 							</div>
 
 							<div className="mx-2">
 								<button
+									style={{ color: '#9B1FE9' }}
 									type="button"
-									class="btn btn-outline-primary"
+									className="btn btn-outline-primary"
 									data-bs-toggle="modal"
 									data-bs-target="#exampleModal"
 								>
+									<span className="px-2">
+										<FaWallet></FaWallet>
+									</span>
 									Connect wallet
 								</button>
 
 								<div
-									class="modal fade"
+									className="modal fade"
 									id="exampleModal"
-									tabindex="-1"
+									tabIndex="-1"
 									aria-labelledby="exampleModalLabel"
 									aria-hidden="true"
 								>
-									<div class="modal-dialog">
-										<div class="modal-content">
-											<div class="modal-header">
-												<h2 class="modal-title" id="exampleModalLabel">
+									<div className="modal-dialog">
+										<div className="modal-content">
+											<div className="modal-header">
+												<h2 className="modal-title" id="exampleModalLabel">
 													Connect your wallet
 												</h2>
 												<button
 													type="button"
-													class="btn-close"
+													className="btn-close"
 													data-bs-dismiss="modal"
 													aria-label="Close"
 												></button>
 											</div>
-											<div class="modal-body">
+											<div className="modal-body">
 												<div className="d-flex text-center justify-content-center align-items-center mx-2">
 													<div className=" p-5 me-2  bg-light">
 														<img className="img-fluid" src={img1} alt="" />
@@ -84,26 +103,15 @@ const Navbar = () => {
 													</div>
 												</div>
 											</div>
-											{/* <div class="modal-footer">
-												<button
-													type="button"
-													class="btn btn-secondary"
-													data-bs-dismiss="modal"
-												>
-													Close
-												</button>
-												<button type="button" class="btn btn-primary">
-													Save changes
-												</button>
-											</div> */}
 										</div>
 									</div>
 								</div>
 							</div>
 
-							<div class="dropdown mx-2">
+							<div className="dropdown mx-2">
 								<Link
-									class="btn btn-secondary dropdown-toggle"
+									style={{ color: '#9B1FE9' }}
+									className=" border-0 dropdown-toggle fs-4"
 									href="#"
 									role="button"
 									id="dropdownMenuLink"
@@ -113,19 +121,22 @@ const Navbar = () => {
 									<FaUserCircle></FaUserCircle>
 								</Link>
 
-								<ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+								<ul
+									className="dropdown-menu"
+									aria-labelledby="dropdownMenuLink"
+								>
 									<li>
-										<Link to="/login" class="dropdown-item">
+										<Link to="/login" className="dropdown-item">
 											Login
 										</Link>
 									</li>
 									<li>
-										<Link to="/signup" class="dropdown-item">
+										<Link to="/signup" className="dropdown-item">
 											SignUp
 										</Link>
 									</li>
 									<li>
-										<Link to="/faq" class="dropdown-item" href="#">
+										<Link to="/faq" className="dropdown-item" href="#">
 											FAQ
 										</Link>
 									</li>
